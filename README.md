@@ -1,15 +1,30 @@
 # CG-asst5
-There are two parts that I’m pretty interested in after these four assignments:
-- Advanced Monte Carlo Rendering
-- Mesh-Based Dynamics
+
+## Ningna Wang(ningnaw)
+
+#### Bidirectional Path Tracing
+
+I’m expecting this algorithm can handle indirect lighting problems far more efficiently and robustly than ordinary path tracing.
+
+###### 1. Alogorithm:
+- Suppose we go from camera to create the ray path: p1->p2->...->pi, so this time we also create a ray path from light: q1->q2->...->qj. Therefore, the total ray path should be:
+
+>>>>>>>>>>>>>>> p = p1->p2->...->pi->qj->....q2->q1
+
+- Trace a shadow ray from pi to qj to see if they are visible
+- If so, that means above path carries energy from the light to camera. Then we can evaluate
+this path’s contribution accordingly.
+- If not, which means the corresponding pixel in camera should be in shadow
 
 
-Even though my asst 3 is not perfect, I’m still dreaming of implementing some advanced algorithm to enhance the ray tracing rendering performance.
+###### 2. How to build:
+-  mkdir build && cd build && cmake .. && make
+-  ./pathtracer -m 4 -s 8 ../dae/sky/CBspheres_lambertian.dae
 
-1. So my first choice for assignment 5 is implementing <strong> Bidirectional Path Tracing </strong>. I’m expecting this algorithm can handle indirect lighting problems far more efficiently and robustly than ordinary path tracing.
+###### 3. Attention:
+-  only support area light
+
+###### 4. Results:
 
 
-2. Since I’m also interested in the bunny that Prof. Keenan shown on lecture, I still want to work on implementing basic linear equations: Laplace, heat, and wave equations on mesh. I'm also considering this part as an extra credit.
 
-
-3. If I can implement the first two parts smoothly, I may use ‘late’ days to implement Photon Mapping for extra credit, which will definitely give me better result(it should make cornel box like a real one). But not 
