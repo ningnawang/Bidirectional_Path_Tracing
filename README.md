@@ -33,7 +33,7 @@ this path’s contribution accordingly.
 ##### 4. Results:
 
 ###### Example 1 (lambertian + 128 pixels):
-- Bidirectional Ray Tracing:
+- Bidirectional Path Tracing:
 
 $ ./pathtracer -m 5 -s 128 -t 100../dae/sky/CBspheres_lambertian.dae
 
@@ -49,7 +49,7 @@ $ ./pathtracer -m 5 -s 128 -t 100../dae/sky/CBspheres_lambertian.dae
 
 
 ###### Example 2 (lambertian + 512 pixels):
-- Bidirectional Ray Tracing:
+- Bidirectional Path Tracing:
 
 $ ./pathtracer -m 5 -s 512 -t 100../dae/sky/CBspheres_lambertian.dae
 
@@ -64,7 +64,7 @@ $ ./pathtracer -m 5 -s 512 -t 100../dae/sky/CBspheres_lambertian.dae
 </br></br></br>
 
 ###### Example 3 (128 pixels):
-- Bidirectional Ray Tracing:
+- Bidirectional Path Tracing:
 
 $ ./pathtracer -m 5 -s 128 -t 100../dae/sky/CBspheres.dae
 
@@ -77,3 +77,7 @@ $ ./pathtracer -m 5 -s 128 -t 100../dae/sky/CBspheres.dae
 
 ![alt tag](https://github.com/junanita/CG-asst5/blob/master/asst5/result/128_B.png)
 
+
+</br></br></br>
+##### 5. Analysis:
+From above reuslt pictures, we can see that examples rendering using Bidirectional Path Tracing(BPT) showed very good result at 128 to 256 samples per pixel comparing to the reference results. However, the rendering time of BPT is slightly longer than classic path tracing.
