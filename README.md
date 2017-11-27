@@ -1,4 +1,6 @@
-# CG-asst5
+# Bidirectional Path Tracing
+
+CMU 15-462/662 personal project in 2015Fall (http://15462.courses.cs.cmu.edu/fall2015/)
 
 ## Ningna Wang(ningnaw)
 
